@@ -20,7 +20,7 @@ public abstract class Station extends Actor {
 	@SuppressWarnings("unused")
 	private StationView theView;
 
-	/** Constructor for all stations
+	/** Constructor for all stations.
 	 *
 	 * @param label of the station 
 	 * @param xPos x position of the station 
