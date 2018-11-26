@@ -23,31 +23,33 @@ import org.jdom2.input.SAXBuilder;
 public class Factory {
 	
 	/** the objects XML data file */
-	private static String theObjectDataFile = "xml/object.xml"; 
-	
+	private static String theObjectDataFile = "xml/Szenario 1/object.xml";
+
 	/** the stations XML data file */
-	private static String theStationDataFile = "xml/station.xml";
+	private static String theStationDataFile = "xml/Szenario 1/station.xml";
 	
 	/** the start station XML data file */
-	private static String theStartStationDataFile = "xml/startstation.xml"; 
-	
+	private static String theStartStationDataFile = "xml/Szenario 1/startstation.xml";
+
 	/** the end station XML data file */
-	private static String theEndStationDataFile = "xml/endstation.xml"; 
-	
+	private static String theEndStationDataFile = "xml/Szenario 1/endstation.xml";
+
 	/** the x position of the starting station, also position for all starting objects */
 	private static int XPOS_STARTSTATION;
-	
+
 	/** the y position of the starting station, also position for all starting objects */
 	private static int YPOS_STARTSTATION;
 
 
 	public static void setScenario(int i){
 		if(i==1){
+			theObjectDataFile = "xml/Szenario 1/object.xml";
 			theStationDataFile = "xml/Szenario 1/station.xml";
 			theStartStationDataFile = "xml/Szenario 1/startstation.xml";
 			theEndStationDataFile = "xml/Szenario 1/endstation.xml";
 		}
 		else if(i==2){
+			theObjectDataFile = "xml/Szenario 2/object.xml";
 			theStationDataFile = "xml/Szenario 2/station.xml";
 			theStartStationDataFile = "xml/Szenario 2/startstation.xml";
 			theEndStationDataFile = "xml/Szenario 2/endstation.xml";
@@ -58,6 +60,12 @@ public class Factory {
 			theStartStationDataFile = "xml/Szenario 3/startstation.xml";
 			theEndStationDataFile = "xml/Szenario 3/endstation.xml";
 			}
+			else if(i == 4){
+			theObjectDataFile = "xml/Szenario 4/object.xml";
+			theStationDataFile = "xml/Szenario 4/station.xml";
+			theStartStationDataFile = "xml/Szenario 4/startstation.xml";
+			theEndStationDataFile = "xml/Szenario 4/endstation.xml";
+		}
 		}
 
 			/**
