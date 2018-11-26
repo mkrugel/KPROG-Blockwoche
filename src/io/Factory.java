@@ -144,7 +144,9 @@ public class Factory {
 				e.printStackTrace();
 		}
      }
-	
+	private static void createSimpleStation(){
+
+	}
 	/**
      * create some objects out of the XML file
      * 
