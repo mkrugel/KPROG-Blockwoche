@@ -38,7 +38,7 @@
 	</station>
 	<station>
 		<label>Station_3</label>
-		<troughput>100</troughput>
+		<troughput>1000</troughput>
 		<x_position>500</x_position>
 		<y_position>250</y_position>
 		<view>
