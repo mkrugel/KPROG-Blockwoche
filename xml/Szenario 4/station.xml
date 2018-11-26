@@ -4,26 +4,45 @@
 	<station>
 		<label>Station_1</label>
 		<troughput>5</troughput>
-		<x_position>350</x_position>
+		<x_position>220</x_position>
 		<y_position>250</y_position>
 		<view>
 			<image>station.png</image>
 		</view>
 
 		<inqueue>
-			<x_position>360</x_position>
+			<x_position>230</x_position>
 			<y_position>190</y_position>
 		</inqueue>
 		<inqueue>
-			<x_position>390</x_position>
+			<x_position>260</x_position>
 			<y_position>190</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>360</x_position>
+			<x_position>230</x_position>
 			<y_position>330</y_position>
 		</outqueue>
 		<outqueue>
-			<x_position>390</x_position>
+			<x_position>260</x_position>
+			<y_position>330</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Station_2</label>
+		<troughput>5</troughput>
+		<x_position>450</x_position>
+		<y_position>250</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+
+		<inqueue>
+			<x_position>470</x_position>
+			<y_position>190</y_position>
+		</inqueue>
+
+		<outqueue>
+			<x_position>470</x_position>
 			<y_position>330</y_position>
 		</outqueue>
 	</station>
