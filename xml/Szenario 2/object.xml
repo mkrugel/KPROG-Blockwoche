@@ -4,6 +4,9 @@
 		<label>Objekt_1</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -21,6 +24,9 @@
 		<label>Objekt_2</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -38,6 +44,9 @@
 		<label>Objekt_3</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -55,6 +64,9 @@
 		<label>Objekt_4</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -72,6 +84,9 @@
 		<label>Objekt_5</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -89,6 +104,9 @@
 		<label>Objekt_6</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -106,6 +124,9 @@
 		<label>Objekt_7</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -123,6 +144,9 @@
 		<label>Objekt_8</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -140,6 +164,9 @@
 		<label>Objekt_9</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -157,6 +184,9 @@
 		<label>Objekt_10</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -174,6 +204,9 @@
 		<label>Objekt_11</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>
@@ -191,6 +224,9 @@
 		<label>Objekt_12</label>
 		<processtime>10</processtime>
 		<speed>2</speed>
+		<capacity>500</capacity>
+		<kosten>5638.9</kosten>
+		<einnahmen>4.5</einnahmen>
 		<view>
 			<image>object.png</image>
 			<image2>objectFull.png</image2>

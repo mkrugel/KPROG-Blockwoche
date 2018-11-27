@@ -2,33 +2,75 @@
 <settings>
 
 	<station>
-		<label>Station_1</label>
+		<label>Auffuell_Station1</label>
 		<troughput>5</troughput>
 		<x_position>220</x_position>
-		<y_position>250</y_position>
+		<y_position>100</y_position>
 		<view>
 			<image>station.png</image>
 		</view>
-
 		<inqueue>
-			<x_position>230</x_position>
-			<y_position>190</y_position>
-		</inqueue>
-		<inqueue>
-			<x_position>260</x_position>
-			<y_position>190</y_position>
+			<x_position>240</x_position>
+			<y_position>40</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>230</x_position>
-			<y_position>330</y_position>
-		</outqueue>
-		<outqueue>
-			<x_position>260</x_position>
-			<y_position>330</y_position>
+			<x_position>240</x_position>
+			<y_position>180</y_position>
 		</outqueue>
 	</station>
 	<station>
-		<label>Station_2</label>
+		<label>Auffuell_Station2</label>
+		<troughput>5</troughput>
+		<x_position>220</x_position>
+		<y_position>300</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+		<inqueue>
+			<x_position>240</x_position>
+			<y_position>240</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>240</x_position>
+			<y_position>380</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Auffuell_Station3</label>
+		<troughput>5</troughput>
+		<x_position>220</x_position>
+		<y_position>500</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+		<inqueue>
+			<x_position>240</x_position>
+			<y_position>440</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>240</x_position>
+			<y_position>580</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Auffuell_Station4</label>
+		<troughput>5</troughput>
+		<x_position>220</x_position>
+		<y_position>700</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+		<inqueue>
+			<x_position>240</x_position>
+			<y_position>640</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>240</x_position>
+			<y_position>780</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Verschluss_Station1</label>
 		<troughput>5</troughput>
 		<x_position>450</x_position>
 		<y_position>250</y_position>
@@ -44,6 +86,25 @@
 		<outqueue>
 			<x_position>470</x_position>
 			<y_position>330</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Verschluss_Station2</label>
+		<troughput>5</troughput>
+		<x_position>450</x_position>
+		<y_position>550</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+
+		<inqueue>
+			<x_position>470</x_position>
+			<y_position>490</y_position>
+		</inqueue>
+
+		<outqueue>
+			<x_position>470</x_position>
+			<y_position>630</y_position>
 		</outqueue>
 	</station>
 
