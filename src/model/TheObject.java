@@ -85,7 +85,6 @@ public class TheObject extends Actor {
 	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
 
 		new TheObject(label, stationsToGo, processtime, speed, xPos, yPos, image);
-
 	}
 
 	/** Chose the next station to go to
@@ -250,17 +249,14 @@ public class TheObject extends Actor {
 
 		/** the treated time by all processing stations, in seconds */
 		int myTreatmentTime = 0;
-
 	}
 
 	/**Print some statistics
 	 *
 	 */
 	public void printStatistics() {
-
 		String theString = "\nObjekt: " + this.label;
 		theString = theString + "\nZeit zum Behandeln des Objekts: " + measurement.myTreatmentTime;
-
 		Statistics.show(theString);
 
 	}

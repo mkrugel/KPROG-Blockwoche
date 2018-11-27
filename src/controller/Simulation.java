@@ -45,6 +45,7 @@ public class Simulation {
 		//a new simulation
 		Simulation theSimulation = new Simulation();
 		theSimulation.init();
+		Factory.profitCounter();
 		
 	}
 	
