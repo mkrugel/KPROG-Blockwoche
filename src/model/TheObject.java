@@ -26,6 +26,9 @@ public class TheObject extends Actor {
 	/** the speed of the object, the higher the lower */
 	private int mySpeed;
 
+	/**the capacity of the object, the bigger the higher the processtime*/
+	private int myCapacity;
+
 	/** all the station (labels) where the object have to go to*/
 	private ArrayList<String> stationsToGo = new ArrayList<String>();
 
@@ -52,7 +55,7 @@ public class TheObject extends Actor {
 	 * @param yPos y position of the object
 	 * @param image image of the object
 	 */
-	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
+	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed,int capacity, int xPos, int yPos, String image){
 		super(label, xPos, yPos);
 
 		//create the view
@@ -63,6 +66,7 @@ public class TheObject extends Actor {
 		this.stationsToGo = stationsToGo;
 		this.processTime = processtime;
 		this.mySpeed = speed;
+		this.myCapacity = capacity;
 
 		//the first station to go to is the start station
 		Station station = this.getNextStation();
@@ -82,9 +86,9 @@ public class TheObject extends Actor {
 	 * @param yPos y position of the object
 	 * @param image image of the object
 	 */
-	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
+	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int capacity,int xPos, int yPos, String image){
 
-		new TheObject(label, stationsToGo, processtime, speed, xPos, yPos, image);
+		new TheObject(label, stationsToGo, processtime, speed, capacity, xPos, yPos, image);
 	}
 
 	/** Chose the next station to go to
@@ -287,6 +291,8 @@ public class TheObject extends Actor {
 	public int getProcessTime() {
 		return processTime;
 	}
+
+	public int getCapacity(){return myCapacity;}
 
 }
 	

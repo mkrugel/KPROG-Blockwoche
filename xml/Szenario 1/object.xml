@@ -6,6 +6,7 @@
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
 		<einnahmen>4.5</einnahmen>
+		<capacity>250</capacity>
 		<view>
 			<image>object.png</image>
 		</view>
@@ -22,6 +23,7 @@
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
 		<einnahmen>4.5</einnahmen>
+		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
 		</view>

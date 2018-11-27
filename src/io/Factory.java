@@ -226,6 +226,7 @@ public class Factory {
                 String label = null;
                 int processtime = 0;
                 int speed = 0;
+                int capacity = 0;
                 String image = null;
 
 
@@ -233,6 +234,7 @@ public class Factory {
                 label = theObject.getChildText("label");
                 processtime = Integer.parseInt(theObject.getChildText("processtime"));
                 speed = Integer.parseInt(theObject.getChildText("speed"));
+                capacity = Integer.parseInt(theObject.getChildText("capacity"));
 
                 //the <view> ... </view> node
                 Element viewGroup = theObject.getChild("view");
@@ -256,7 +258,7 @@ public class Factory {
                 }
 
                 //creating a new TheObject object
-                TheObject.create(label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+                TheObject.create(label, stationsToGo, processtime, speed,capacity, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
 
 
             }

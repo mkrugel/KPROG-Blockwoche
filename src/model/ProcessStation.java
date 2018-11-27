@@ -143,10 +143,18 @@ public class ProcessStation extends Station {
 
 		//the processing time of the object
 		int processTime = theObject.getProcessTime();
+		//the capacity of the object
+		int capacity = theObject.getCapacity();
 
-		//the time to handle the object
-		int theObjectsTreatingTime = (int) (processTime/this.troughPut);
-
+		int theObjectTreatingTime = 0;
+		if(capacity==250) {
+			//the time to handle the object
+			theObjectTreatingTime = (int) ((processTime/2) / this.troughPut);
+		}else if(capacity == 500){
+			theObjectTreatingTime =(int)(processTime/this.troughPut);
+		}else {
+			theObjectTreatingTime =(int)(processTime/this.troughPut);
+		}
 		//get the starting time of the treatment
 		long startTime = Simulation.getGlobalTime();
 
@@ -154,7 +162,7 @@ public class ProcessStation extends Station {
 		int elapsedTime = 0;
 
 		//while treating time is not reached
-		while (!(theObjectsTreatingTime <= elapsedTime)){
+		while (!(theObjectTreatingTime <= elapsedTime)){
 
 			//the elapsed time since the start of the treatment
 			elapsedTime = (int) (Simulation.getGlobalTime() - startTime);
