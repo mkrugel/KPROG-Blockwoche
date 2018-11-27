@@ -12,8 +12,8 @@ import model.Actor;
 /**
  * The main class, controls the flow of the simulation
  * 
- * @author Jaeger, Schmidt
- * @version 2016-07-07
+ * @author Jaeger, Schmidt modified by Team16
+ * @version 2018-11-27
  */
 public class Simulation {
 	
@@ -32,7 +32,7 @@ public class Simulation {
 	
 	
 	/**
-	 * starts the simulation
+	 * starts the simulation and asks which scenario should be started
 	 * 
 	 * @param args
 	 */

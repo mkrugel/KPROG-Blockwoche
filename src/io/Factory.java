@@ -17,8 +17,8 @@ import org.jdom2.input.SAXBuilder;
  * This is an abstract factory that creates instances
  * of actor types like objects, stations and their queues 
  * 
- * @author Jaeger, Schmidt
- * @version 2017-10-29
+ * @author Jaeger, Schmidt modified by Team16
+ * @version 2018-11-27
  */
 public class Factory {
 	
@@ -40,7 +40,10 @@ public class Factory {
 	/** the y position of the starting station, also position for all starting objects */
 	private static int YPOS_STARTSTATION;
 
-
+	/** selects which scenario starts
+	 *
+	 * @param i the input number which decides the scenario
+	 * */
 	public static void setScenario(int i){
 		if(i==1){
 			theObjectDataFile = "xml/Szenario 1/object.xml";
@@ -171,13 +174,15 @@ public class Factory {
     			String label = null;
     			int processtime = 0;
     			int speed = 0;
+    			int capacity =0;
     			String image = null;
     			    			
     			// read data
     			label = theObject.getChildText("label");
     			processtime = Integer.parseInt(theObject.getChildText("processtime"));
     			speed = Integer.parseInt(theObject.getChildText("speed"));
-        		        		
+        		capacity = Integer.parseInt(theObject.getChildText("capacity"));
+
         		//the <view> ... </view> node
         		Element viewGroup = theObject.getChild("view");
         		// read data
@@ -200,7 +205,7 @@ public class Factory {
         		}
         	  		
         		//creating a new TheObject object
-        		TheObject.create(label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+        		TheObject.create(label, stationsToGo, processtime, speed, capacity,  XPOS_STARTSTATION, YPOS_STARTSTATION, image);
 
 
 			}

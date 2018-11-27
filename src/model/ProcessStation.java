@@ -143,10 +143,19 @@ public class ProcessStation extends Station {
 
 		//the processing time of the object
 		int processTime = theObject.getProcessTime();
-
+		int capacity = theObject.getCapacity();
+		int theObjectsTreatingTime= 0;
 		//the time to handle the object
-		int theObjectsTreatingTime = (int) (processTime/this.troughPut);
 
+		if(capacity==250){
+			theObjectsTreatingTime = (int) ((processTime/2)/this.troughPut);
+		}
+		else if(capacity==500){
+			theObjectsTreatingTime = (int) (processTime/this.troughPut);
+		}
+		 else {
+			theObjectsTreatingTime = (int) (processTime / this.troughPut);
+		}
 		//get the starting time of the treatment
 		long startTime = Simulation.getGlobalTime();
 
@@ -228,7 +237,6 @@ public class ProcessStation extends Station {
 		theString = theString + "\nAnzahl der behandelten Objekte: " + measurement.numbOfVisitedObjects;
 		theString = theString + "\nZeit zum Behandeln aller Objekte: " + measurement.inUseTime;
 		theString = theString + "\nDurchnittliche Behandlungsdauer: " + measurement.avgTreatmentTime();
-
 		Statistics.show(theString);
 
 	}

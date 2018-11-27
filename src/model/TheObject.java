@@ -11,8 +11,8 @@ import controller.Simulation;
 /**
  * Class for the objects
  *
- * @author Jaeger, Schmidt
- * @version 2016-07-08
+ * @author Jaeger, Schmidt modified by Team 16
+ * @version 2018-11-27
  */
 
 public class TheObject extends Actor {
@@ -25,6 +25,9 @@ public class TheObject extends Actor {
 
 	/** the speed of the object, the higher the lower */
 	private int mySpeed;
+
+	/** the capacity of the object, the higher the bigger is the glass */
+	private int myCapacity;
 
 	/** all the station (labels) where the object have to go to*/
 	private ArrayList<String> stationsToGo = new ArrayList<String>();
@@ -48,11 +51,13 @@ public class TheObject extends Actor {
 	 * @param stationsToGo the stations to go
 	 * @param processtime the processing time of the object, affects treatment by a station
 	 * @param speed the moving speed of the object
+	 * @param capacity capacity of the object
 	 * @param xPos x position of the object
 	 * @param yPos y position of the object
 	 * @param image image of the object
+	 *
 	 */
-	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
+	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image){
 		super(label, xPos, yPos);
 
 		//create the view
@@ -63,6 +68,7 @@ public class TheObject extends Actor {
 		this.stationsToGo = stationsToGo;
 		this.processTime = processtime;
 		this.mySpeed = speed;
+		this.myCapacity = capacity;
 
 		//the first station to go to is the start station
 		Station station = this.getNextStation();
@@ -78,13 +84,16 @@ public class TheObject extends Actor {
 	 * @param stationsToGo the stations to go
 	 * @param processtime the processing time of the object, affects treatment by a station
 	 * @param speed the moving speed of the object
+	 * @param capacity capacity of the object
 	 * @param xPos x position of the object
 	 * @param yPos y position of the object
 	 * @param image image of the object
 	 */
-	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
+	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed, int capacity ,int xPos, int yPos, String image){
 
-		new TheObject(label, stationsToGo, processtime, speed, xPos, yPos, image);
+		new TheObject(label, stationsToGo, processtime, speed, capacity, xPos, yPos, image);
+
+
 
 	}
 
@@ -165,8 +174,9 @@ public class TheObject extends Actor {
 		if(outQueues.size()==1) outQueues.get(0).offer(this);
 
 			//Do we have more than one outgoing queue?
-			//We have to make a decision which queue we choose -> your turn 
-		else{
+			//We have to make a decision which queue we choose -> your turn
+
+		else {
 
 			//get the first queue and it's size
 			SynchronizedQueue queueBuffer = outQueues.get(0);
@@ -290,6 +300,9 @@ public class TheObject extends Actor {
 	 */
 	public int getProcessTime() {
 		return processTime;
+	}
+	public int getCapacity() {
+		return myCapacity;
 	}
 
 }
