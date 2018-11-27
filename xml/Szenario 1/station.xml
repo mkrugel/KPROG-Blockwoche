@@ -5,6 +5,7 @@
 		<troughput>15</troughput>
 		<x_position>200</x_position>
 		<y_position>100</y_position>
+		<limit>30000</limit>
 		<view>
 			<image>station.png</image>
 		</view>
@@ -26,7 +27,7 @@
 		<view>
 			<image>station.png</image>
 		</view>
-
+		<limit>30000</limit>
 		<inqueue>
 			<x_position>220</x_position>
 			<y_position>340</y_position>
@@ -44,6 +45,7 @@
 		<view>
 			<image>station.png</image>
 		</view>
+		<limit>150000</limit>
 
 		<inqueue>
 			<x_position>520</x_position>
