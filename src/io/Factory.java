@@ -20,8 +20,8 @@ import org.jdom2.input.SAXBuilder;
  * This is an abstract factory that creates instances
  * of actor types like objects, stations and their queues
  *
- * @author Jaeger, Schmidt
- * @version 2017-10-29
+ * @author Jaeger, Schmidt modified by Team16
+ * @version 2018-11-27
  */
 public class Factory {
 
@@ -55,7 +55,11 @@ public class Factory {
      * the y position of the starting station, also position for all starting objects
      */
     private static int YPOS_STARTSTATION;
-
+    /**
+     * set the scenario which was choosed
+     *
+     * @param i the number to choose a scenario
+     */
 
     public static void setScenario(int i) {
         if (i == 1) {

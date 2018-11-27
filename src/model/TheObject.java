@@ -11,8 +11,8 @@ import controller.Simulation;
 /**
  * Class for the objects
  *
- * @author Jaeger, Schmidt
- * @version 2016-07-08
+ * @author Jaeger, Schmidt modified by Team16
+ * @version 2018-11-27
  */
 
 public class TheObject extends Actor {
@@ -51,6 +51,7 @@ public class TheObject extends Actor {
 	 * @param stationsToGo the stations to go
 	 * @param processtime the processing time of the object, affects treatment by a station
 	 * @param speed the moving speed of the object
+	 * @param capacity the capacity of the object
 	 * @param xPos x position of the object
 	 * @param yPos y position of the object
 	 * @param image image of the object
@@ -82,6 +83,7 @@ public class TheObject extends Actor {
 	 * @param stationsToGo the stations to go
 	 * @param processtime the processing time of the object, affects treatment by a station
 	 * @param speed the moving speed of the object
+	 *@param capacity the capacity of the object
 	 * @param xPos x position of the object
 	 * @param yPos y position of the object
 	 * @param image image of the object
