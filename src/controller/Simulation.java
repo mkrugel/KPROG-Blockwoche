@@ -37,7 +37,8 @@ public class Simulation {
 	 * @param args
 	 */
 	public static void main(String[] args){
-		System.out.println("Welches Szenario soll gestartet werden? \n 0 für Szenario 0 \n 1 für Szenario 1 \n 2 für Szenario 2 \n 3 für Szenario 3 \n 4 für Szenario 4");
+
+	    System.out.println("Welches Szenario soll gestartet werden? \n 0 für Szenario 0 \n 1 für Szenario 1 \n 2 für Szenario 2 \n 3 für Szenario 3 \n 4 für Szenario 4");
 		Scanner scan = new Scanner(System.in);
 		int i =scan.nextInt();
 		Factory.setScenario(i);

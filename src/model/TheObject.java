@@ -56,7 +56,7 @@ public class TheObject extends Actor {
 	 * @param yPos y position of the object
 	 * @param image image of the object
 	 */
-	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed,int capacity, int xPos, int yPos, String image){
+	public TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed,int capacity, int xPos, int yPos, String image){
 		super(label, xPos, yPos);
 
 		//create the view
