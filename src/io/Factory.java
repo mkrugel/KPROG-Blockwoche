@@ -120,19 +120,24 @@ public class Factory {
             List<Element> allObjects = root.getChildren("object");
 
 
-
             Element object = root.getChild("object");
             String kosten = object.getChildText("kosten");
             double kosten1 = Double.parseDouble(kosten);
 
 
-            Element object1 = root.getChild("einnahmen");
-            String einnahmen = object.getChildText("einnahmen");
-            double einnahmen1 = Double.parseDouble(einnahmen);
 
-            umsatz = einnahmen1 * allObjects.size();
+            for(Object o : allObjects){
+                Element object1 = (Element) o;
+                String preis = object1.getChildText("preis");
+                double preis1 = Double.parseDouble(preis);
+
+                umsatz += (preis1 * 5000);
+            }
+
             gewinn = umsatz - kosten1;
             System.out.println("Profit: " + gewinn);
+
+
 
         } catch (JDOMException e) {
             e.getMessage();
