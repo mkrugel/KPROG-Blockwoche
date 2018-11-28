@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<settings>
+	<station>
+		<label>Auffuell_Station1</label>
+		<troughput>15</troughput>
+		<x_position>220</x_position>
+		<y_position>250</y_position>
+		<limit>30000</limit>
+		<view>
+			<image>station.png</image>
+		</view>
+
+		<inqueue>
+			<x_position>240</x_position>
+			<y_position>190</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>240</x_position>
+			<y_position>330</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Verschluss_Station1</label>
+		<troughput>20</troughput>
+		<x_position>500</x_position>
+		<y_position>250</y_position>
+		<view>
+			<image>station.png</image>
+		</view>
+		<limit>150000</limit>
+
+		<inqueue>
+			<x_position>520</x_position>
+			<y_position>190</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>520</x_position>
+			<y_position>330</y_position>
+		</outqueue>
+	</station>
+
+</settings>
