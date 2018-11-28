@@ -109,12 +109,12 @@ public class Factory {
      * counts the profit of all the objects which were created
      */
 
-    public static void profitCounter() {
-
+    public static double profitCounter() {
+        double gewinn = 0.0;
+        double umsatz = 0.0;
         try {
 
-            double gewinn = 0.0;
-            double umsatz = 0.0;
+
 
             //read the information from the XML file into a JDOM Document
             Document theXMLDoc = new SAXBuilder().build(theObjectDataFile);
@@ -150,6 +150,7 @@ public class Factory {
         } catch (IOException e) {
             e.getMessage();
         }
+        return gewinn;
     }
 
     /**
