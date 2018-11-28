@@ -2,19 +2,21 @@ package model;
 
 import java.util.Collection;
 
+import controller.Simulation;
 import io.Statistics;
 
 /**
  * Class for the end station. This is the last station where all objects are collected
  *
- * @author Jaeger, Schmidt
- * @version 2017-10-26
+ * @author Jaeger, Schmidt modified by Team16
+ * @version 2018-11-28
  */
 public class EndStation extends SimpleStation {
 
 	/** instance of the start station */
 	@SuppressWarnings("unused")
 	private static EndStation theEndStation;
+	private static long allTime;
 
 	/** (private!) Constructor, creates a new end station
 	 *
@@ -71,6 +73,7 @@ public class EndStation extends SimpleStation {
 		theObject.theView.setLocation((this.getXPos() -100) + 18 * numberOfOutQueueObjects(), this.getYPos() + 120);
 
 		//End the simulation if the condition is met
+
 		endSimulation();
 
 
@@ -78,14 +81,15 @@ public class EndStation extends SimpleStation {
 
 
 	/** End the simulation if the condition is met
-	 *
+	 *and prints the Time which was needed for the process
 	 *
 	 */
 	private void endSimulation(){
 
 		// Are all objects in the stations outgoing queue, then we are finish
 		if(TheObject.getAllObjects().size() == numberOfOutQueueObjects()){
-
+			allTime=Simulation.getGlobalTime();
+			System.out.println("Benötigte Zeiteinheit: "+allTime);
 			Statistics.show("\n--- Simulation beendet ----");
 
 			//show some station statistics
@@ -117,6 +121,14 @@ public class EndStation extends SimpleStation {
 	@Override
 	protected Collection<TheObject> getNextOutQueueObjects() {
 		return null;
+	}
+
+	/**
+	 * getter for allTime
+	 */
+	public long getAllTime(){
+		return allTime;
+
 	}
 
 

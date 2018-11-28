@@ -62,7 +62,13 @@ public class Factory {
      */
 
     public static void setScenario(int i) {
-        if (i == 1) {
+        if (i == 0) {
+            theObjectDataFile = "xml/Szenario 0/object.xml";
+            theStationDataFile = "xml/Szenario 0/station.xml";
+            theStartStationDataFile = "xml/Szenario 0/startstation.xml";
+            theEndStationDataFile = "xml/Szenario 0/endstation.xml";
+        }
+        else if (i == 1) {
             theObjectDataFile = "xml/Szenario 1/object.xml";
             theStationDataFile = "xml/Szenario 1/station.xml";
             theStartStationDataFile = "xml/Szenario 1/startstation.xml";

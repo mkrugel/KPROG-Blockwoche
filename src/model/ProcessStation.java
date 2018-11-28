@@ -64,7 +64,6 @@ public class ProcessStation extends Station {
 
 	}
 
-
 	@Override
 	protected int numberOfInQueueObjects(){
 
@@ -160,6 +159,7 @@ public class ProcessStation extends Station {
 
 		//the elapsed time of the treatment
 		int elapsedTime = 0;
+
 
 		//while treating time is not reached
 		while (!(theObjectTreatingTime <= elapsedTime)){
