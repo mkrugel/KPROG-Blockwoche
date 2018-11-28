@@ -5,7 +5,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>2.5</preis>
 		<capacity>250</capacity>
 		<view>
 			<image>object.png</image>
@@ -22,7 +22,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -39,7 +39,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -56,7 +56,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -73,7 +73,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -90,7 +90,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -107,7 +107,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -124,7 +124,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -141,7 +141,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -158,7 +158,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -175,7 +175,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
@@ -192,7 +192,7 @@
 		<processtime>10</processtime>
 		<speed>2</speed>
 		<kosten>5638.9</kosten>
-		<einnahmen>4.5</einnahmen>
+		<preis>4.5</preis>
 		<capacity>500</capacity>
 		<view>
 			<image>object.png</image>
