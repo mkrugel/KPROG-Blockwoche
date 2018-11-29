@@ -1,6 +1,9 @@
 package controller;
+
 import static org.junit.Assert.*;
+
 import java.util.ArrayList;
+
 import io.Factory;
 import org.junit.After;
 import org.junit.Before;
@@ -21,23 +24,22 @@ public class testProject {
     }
 
     /**
-     *  Setzt das Testgerüst fuer den Test.
-     *
+     * Setzt das Testgerüst fuer den Test.
+     * <p>
      * Wird vor jeder Testfall-Methode aufgerufen.
      */
     @Before
-    public void setUp()
-    {
+    public void setUp() {
 
     }
+
     /**
      * Gibt das Testgerüst wieder frei.
-     *
+     * <p>
      * Wird nach jeder Testfall-Methode aufgerufen.
      */
     @After
-    public void tearDown()
-    {
+    public void tearDown() {
     }
 
     /**
@@ -47,9 +49,9 @@ public class testProject {
 
     @Test
     public void testProfitCounter() {
-            assertEquals(29361.1,Factory.profitCounter(), 0.0);
-        }
+        assertEquals(29361.1, Factory.profitCounter(), 0.0);
     }
+}
 
 
 
