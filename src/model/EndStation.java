@@ -1,5 +1,6 @@
 package model;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import controller.Simulation;
@@ -75,7 +76,11 @@ public class EndStation extends SimpleStation {
 
 		//End the simulation if the condition is met
 
-		endSimulation();
+		try {
+			endSimulation();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 
 	}
@@ -85,7 +90,7 @@ public class EndStation extends SimpleStation {
 	 *and prints the Time which was needed for the process
 	 *
 	 */
-	private void endSimulation(){
+	private void endSimulation() throws IOException {
 
 		// Are all objects in the stations outgoing queue, then we are finish
 		if(TheObject.getAllObjects().size() == numberOfOutQueueObjects()){
@@ -103,6 +108,7 @@ public class EndStation extends SimpleStation {
 			for (Object object : this.outGoingQueue){
 				((TheObject) object).printStatistics();
 			}
+			TheObject.printStatsPerObject();
 
 			// end simulation
 			// System.exit(0);

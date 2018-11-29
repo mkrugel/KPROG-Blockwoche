@@ -2,9 +2,13 @@ package model;
 
 import controller.model_plotter.CustomPoint;
 import controller.view_plotter.PlotterPane;
+import io.Factory;
 import io.Statistics;
 
 import java.awt.Component;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import view.StartButton;
@@ -299,6 +303,23 @@ final public class TheObject extends Actor {
 		Statistics.show(theString);
 
 	}
+
+	/**
+	 * method to print statistics into a txt file
+	 * @throws IOException
+	 */
+	public static void printStatsPerObject() throws IOException {
+
+		FileWriter file = new FileWriter("statistics.txt");
+		BufferedWriter br = new BufferedWriter(file);
+
+		for(int count = 0; count < allObjects.size(); count++){
+			br.write("" + allObjects.get(count).getLabel() + ": " + allObjects.get(count)+""+ Factory.getGewinn()/allObjects.size());
+			br.newLine();
+		}
+		br.close();
+	}
+
 
 	/**
 	 * creates a Diagram where we can see the numbers of the object and teh time they needed
