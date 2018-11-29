@@ -26,6 +26,11 @@ import org.jdom2.input.SAXBuilder;
  public class Factory {
 
     /**
+     * the gewinn of all objects
+     */
+    static double gewinn =0.0;
+
+    /**
      * the objects XML data file
      */
     private static String theObjectDataFile = "xml/Szenario 1/object.xml";
@@ -110,7 +115,6 @@ import org.jdom2.input.SAXBuilder;
      */
 
     public static double profitCounter() {
-        double gewinn = 0.0;
         double umsatz = 0.0;
         try {
 
@@ -432,8 +436,8 @@ import org.jdom2.input.SAXBuilder;
             e.printStackTrace();
         }
     }
-
-
-
+    public static double getGewinn() {
+        return gewinn;
+    }
 
 }
