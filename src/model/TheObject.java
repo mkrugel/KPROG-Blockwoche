@@ -313,8 +313,10 @@ final public class TheObject extends Actor {
 		FileWriter file = new FileWriter("statistics.txt");
 		BufferedWriter br = new BufferedWriter(file);
 
+		double profit = Factory.getGewinn()/allObjects.size();
+
 		for(int count = 0; count < allObjects.size(); count++){
-			br.write("" + allObjects.get(count).getLabel() + ": " + allObjects.get(count)+""+ Factory.getGewinn()/allObjects.size());
+			br.write("" + allObjects.get(count).getLabel() + ": " +""+profit);
 			br.newLine();
 		}
 		br.close();
@@ -324,7 +326,7 @@ final public class TheObject extends Actor {
 	/**
 	 * creates a Diagram where we can see the numbers of the object and teh time they needed
 	 */
-
+/**
 	public static void createDiagramWithSizeAndTime() {
 		// alle Objekte zählen und
 		long theTime = 0;
@@ -351,7 +353,7 @@ final public class TheObject extends Actor {
 			e.printStackTrace();
 		}
 	}
-
+*/
 
 	/**
 	 * Get all objects
