@@ -23,7 +23,7 @@ import org.jdom2.input.SAXBuilder;
  * @author Jaeger, Schmidt modified by Team16
  * @version 2018-11-27
  */
-public class Factory {
+ public class Factory {
 
     /**
      * the objects XML data file
@@ -432,6 +432,8 @@ public class Factory {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import controller.Simulation;
 import io.Statistics;
+import view.StartButton;
 
 /**
  * Class for the end station. This is the last station where all objects are collected
@@ -88,8 +89,9 @@ public class EndStation extends SimpleStation {
 
 		// Are all objects in the stations outgoing queue, then we are finish
 		if(TheObject.getAllObjects().size() == numberOfOutQueueObjects()){
-			allTime=Simulation.getGlobalTime();
+			allTime=Simulation.getGlobalTime()- StartButton.getStartTime2();
 			System.out.println("Benötigte Zeiteinheit: "+allTime);
+			TheObject.createDiagramWithSizeAndTime();
 			Statistics.show("\n--- Simulation beendet ----");
 
 			//show some station statistics
@@ -123,13 +125,7 @@ public class EndStation extends SimpleStation {
 		return null;
 	}
 
-	/**
-	 * getter for allTime
-	 */
-	public long getAllTime(){
-		return allTime;
 
-	}
 
 
 }

@@ -1,10 +1,13 @@
 package model;
 
+import controller.model_plotter.CustomPoint;
+import controller.view_plotter.PlotterPane;
 import io.Statistics;
 
 import java.awt.Component;
 import java.util.ArrayList;
 
+import view.StartButton;
 import view.TheObjectView;
 import controller.Simulation;
 
@@ -15,48 +18,71 @@ import controller.Simulation;
  * @version 2018-11-27
  */
 
-public class TheObject extends Actor {
+final public class TheObject extends Actor {
 
-	/** the view of the object */
+	/**
+	 * the view of the object
+	 */
 	public TheObjectView theView;
 
-	/** the process time of the object*/
+	/**
+	 * the process time of the object
+	 */
 	private int processTime;
 
-	/** the speed of the object, the higher the lower */
+	/**
+	 * the speed of the object, the higher the lower
+	 */
 	private int mySpeed;
 
-	/**the capacity of the object, the bigger the higher the processtime*/
-	private int myCapacity;
+	/**
+	 * the capacity of the object, the bigger the higher the processtime
+	 */
+	public int myCapacity;
+	/**
+	 * freeObjects for all Scenarios
+	 */
+	private static int freeObjects = 10;
 
-	/** all the station (labels) where the object have to go to*/
+	/**
+	 * all the station (labels) where the object have to go to
+	 */
 	private ArrayList<String> stationsToGo = new ArrayList<String>();
 
-	/** a pointer to the actual position of the stationsToGo list, start position is 0*/
+	/**
+	 * a pointer to the actual position of the stationsToGo list, start position is 0
+	 */
 	private int stationListPointer = 0;
 
-	/** list of all objects */
+	/**
+	 * list of all objects
+	 */
 	private static ArrayList<TheObject> allObjects = new ArrayList<TheObject>();
 
-	/** the actual station where this object is in, null if it's not in a station or a stations queue */
+	/**
+	 * the actual station where this object is in, null if it's not in a station or a stations queue
+	 */
 	private Station actualStation = null;
 
-	/** the instance of our static inner Measurement class*/
+	/**
+	 * the instance of our static inner Measurement class
+	 */
 	Measurement measurement = new Measurement();
 
 
-	/** (private!) Constructor, creates a new object model and send it to the start station
+	/**
+	 * (private!) Constructor, creates a new object model and send it to the start station
 	 *
-	 * @param label of the object
+	 * @param label        of the object
 	 * @param stationsToGo the stations to go
-	 * @param processtime the processing time of the object, affects treatment by a station
-	 * @param speed the moving speed of the object
-	 * @param capacity the capacity of the object
-	 * @param xPos x position of the object
-	 * @param yPos y position of the object
-	 * @param image image of the object
+	 * @param processtime  the processing time of the object, affects treatment by a station
+	 * @param speed        the moving speed of the object
+	 * @param capacity     the capacity of the object
+	 * @param xPos         x position of the object
+	 * @param yPos         y position of the object
+	 * @param image        image of the object
 	 */
-	public TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed,int capacity, int xPos, int yPos, String image){
+	private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image) {
 		super(label, xPos, yPos);
 
 		//create the view
@@ -77,60 +103,65 @@ public class TheObject extends Actor {
 
 	}
 
-	/** Create a new object model
+	/**
+	 * Create a new object model
 	 *
-	 * @param label of the object
+	 * @param label        of the object
 	 * @param stationsToGo the stations to go
-	 * @param processtime the processing time of the object, affects treatment by a station
-	 * @param speed the moving speed of the object
-	 *@param capacity the capacity of the object
-	 * @param xPos x position of the object
-	 * @param yPos y position of the object
-	 * @param image image of the object
+	 * @param processtime  the processing time of the object, affects treatment by a station
+	 * @param speed        the moving speed of the object
+	 * @param capacity     the capacity of the object
+	 * @param xPos         x position of the object
+	 * @param yPos         y position of the object
+	 * @param image        image of the object
+	 * @return a new Object
 	 */
-	public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int capacity,int xPos, int yPos, String image){
-
-		new TheObject(label, stationsToGo, processtime, speed, capacity, xPos, yPos, image);
+	public static TheObject create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int capacity,int xPos, int yPos, String image){
+		if(freeObjects > 0 ) {
+			freeObjects -=1;
+			return new TheObject(label, stationsToGo, processtime, speed, capacity, xPos, yPos, image);
+		}else return null;
 	}
 
-	/** Chose the next station to go to
+	/**
+	 * Chose the next station to go to
 	 *
 	 * @return the next station or null if no station was found
 	 */
-	private Station getNextStation(){
+	private Station getNextStation() {
 
 		//we are at the end of the list
-		if(this.stationsToGo.size() < stationListPointer) return null;
+		if (this.stationsToGo.size() < stationListPointer) return null;
 
 		//get the label of the next station from the list and increase the list pointer
 		String stationLabel = this.stationsToGo.get(stationListPointer++);
 
 		//looking for the matching station and return it
-		for (Station station : Station.getAllStations()){
+		for (Station station : Station.getAllStations()) {
 
-			if(stationLabel.equals(station.getLabel())) return station;
+			if (stationLabel.equals(station.getLabel())) return station;
 
 		}
 
 		return null; //the matching station isn't found
 	}
 
-	/** Chooses a suited incoming queue of the given station and enter it
+	/**
+	 * Chooses a suited incoming queue of the given station and enter it
 	 *
 	 * @param station the station from where the queue should be chosen
-	 *
 	 */
-	private void enterInQueue(Station station){
+	private void enterInQueue(Station station) {
 
 		//get the stations incoming queues
 		ArrayList<SynchronizedQueue> inQueues = station.getAllInQueues();
 
 		//there is just one queue, enter it
-		if(inQueues.size()==1) inQueues.get(0).offer(this);
+		if (inQueues.size() == 1) inQueues.get(0).offer(this);
 
 			//Do we have more than one incoming queue?
 			//We have to make a decision which queue we choose -> your turn 
-		else{
+		else {
 
 			//get the first queue and it's size
 			SynchronizedQueue queueBuffer = inQueues.get(0);
@@ -139,7 +170,7 @@ public class TheObject extends Actor {
 			//Looking for the shortest queue (in a simple way)
 			for (SynchronizedQueue inQueue : inQueues) {
 
-				if(inQueue.size() < queueSize) {
+				if (inQueue.size() < queueSize) {
 					queueBuffer = inQueue;
 					queueSize = inQueue.size();
 				}
@@ -156,22 +187,23 @@ public class TheObject extends Actor {
 	}
 
 
-	/** Chooses a suited outgoing queue of the given station and enter it
+	/**
+	 * Chooses a suited outgoing queue of the given station and enter it
 	 *
 	 * @param station the station from where the queue should be chosen
 	 */
-	void enterOutQueue(Station station){
+	void enterOutQueue(Station station) {
 
 		//get the stations outgoing queues
 		ArrayList<SynchronizedQueue> outQueues = station.getAllOutQueues();
 
 
 		//there is just one queue, enter it
-		if(outQueues.size()==1) outQueues.get(0).offer(this);
+		if (outQueues.size() == 1) outQueues.get(0).offer(this);
 
 			//Do we have more than one outgoing queue?
 			//We have to make a decision which queue we choose -> your turn 
-		else{
+		else {
 
 			//get the first queue and it's size
 			SynchronizedQueue queueBuffer = outQueues.get(0);
@@ -180,7 +212,7 @@ public class TheObject extends Actor {
 			//Looking for the shortest queue (in a simple way)
 			for (SynchronizedQueue inQueue : outQueues) {
 
-				if(inQueue.size() < queueSize) {
+				if (inQueue.size() < queueSize) {
 					queueBuffer = inQueue;
 					queueSize = inQueue.size();
 				}
@@ -195,7 +227,7 @@ public class TheObject extends Actor {
 
 
 	@Override
-	protected boolean work(){
+	protected boolean work() {
 
 		//the object is leaving the station -> set actual station to null
 		this.actualStation = null;
@@ -204,7 +236,7 @@ public class TheObject extends Actor {
 		Station station = this.getNextStation();
 
 		//only move if there is a next station found
-		if(station == null) return false;
+		if (station == null) return false;
 
 		//let the object move to the chosen station
 
@@ -214,18 +246,18 @@ public class TheObject extends Actor {
 		while (!(station.getXPos() == this.xPos && station.getYPos() == this.yPos)) {
 
 			//move to the station
-			if(station.getXPos() > this.xPos) this.xPos++;
-			if(station.getYPos() > this.yPos) this.yPos++;
+			if (station.getXPos() > this.xPos) this.xPos++;
+			if (station.getYPos() > this.yPos) this.yPos++;
 
-			if(station.getXPos() < this.xPos) this.xPos--;
-			if(station.getYPos() < this.yPos) this.yPos--;
+			if (station.getXPos() < this.xPos) this.xPos--;
+			if (station.getYPos() < this.yPos) this.yPos--;
 
 			//set our view to the new position
 			((Component) theView).setLocation(this.xPos, this.yPos);
 
 			//let the thread sleep for the sequence time
 			try {
-				Thread.sleep(Simulation.SPEEDFACTOR *mySpeed);
+				Thread.sleep(Simulation.SPEEDFACTOR * mySpeed);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -244,7 +276,6 @@ public class TheObject extends Actor {
 		return false;
 
 
-
 	}
 
 	/**
@@ -253,12 +284,14 @@ public class TheObject extends Actor {
 	 */
 	static class Measurement {
 
-		/** the treated time by all processing stations, in seconds */
+		/**
+		 * the treated time by all processing stations, in seconds
+		 */
 		int myTreatmentTime = 0;
 	}
 
-	/**Print some statistics
-	 *
+	/**
+	 * Print some statistics
 	 */
 	public void printStatistics() {
 		String theString = "\nObjekt: " + this.label;
@@ -267,8 +300,40 @@ public class TheObject extends Actor {
 
 	}
 
+	/**
+	 * creates a Diagram where we can see the numbers of the object and teh time they needed
+	 */
 
-	/** Get all objects
+	public static void createDiagramWithSizeAndTime() {
+		// alle Objekte zählen und
+		long theTime = 0;
+		theTime = Simulation.getGlobalTime()-StartButton.getStartTime2();
+
+
+		ArrayList<CustomPoint> points = new ArrayList<>();
+
+		points.add(new CustomPoint(0, 0));
+		points.add(new CustomPoint(Math.toIntExact(theTime), allObjects.size()));
+
+		new PlotterPane(points,
+				800,
+				600,
+				true,
+				"Zeiteinheiten",
+				"bearbeitete Objekte",
+				"bearbeitete Objekte / Zeiteinheiten");
+
+		//is not needed. Just to see the result.
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	/**
+	 * Get all objects
 	 *
 	 * @return a list of all objects
 	 */
@@ -277,7 +342,8 @@ public class TheObject extends Actor {
 	}
 
 
-	/** Get the actual station where this object is in
+	/**
+	 * Get the actual station where this object is in
 	 *
 	 * @return the actual station where this object is in, null if it's not in a station or a stations queue
 	 */
@@ -286,7 +352,8 @@ public class TheObject extends Actor {
 	}
 
 
-	/**Get the objects processing time
+	/**
+	 * Get the objects processing time
 	 *
 	 * @return the processing time
 	 */
@@ -294,7 +361,15 @@ public class TheObject extends Actor {
 		return processTime;
 	}
 
-	public int getCapacity(){return myCapacity;}
+	/**
+	 * Get the objects capacity
+	 *
+	 * @return the processing time
+	 */
+	public int getCapacity() {
+		return myCapacity;
+	}
+
 
 }
 	

@@ -1,13 +1,17 @@
 package controller;
 
 import com.sun.org.apache.xpath.internal.SourceTree;
+
+import model.TheObject;
 import view.SimulationView;
 import io.Factory;
 import io.Statistics;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicLong;
 import model.Actor;
+import view.StartButton;
 
 /**
  * The main class, controls the flow of the simulation
@@ -43,14 +47,13 @@ public class Simulation {
 		int i =scan.nextInt();
 		Factory.setScenario(i);
 
-
 		//a new simulation
 		Simulation theSimulation = new Simulation();
 		theSimulation.init();
 		Factory.profitCounter();
-		
+
 	}
-	
+
 	/**
 	 * initialize the simulation
 	 * 
