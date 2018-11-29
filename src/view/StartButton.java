@@ -9,6 +9,7 @@ import controller.Simulation;
 import model.StartStation;
 
 
+
 /**
  * A simple JButton class for a start button
  * 
@@ -18,23 +19,35 @@ import model.StartStation;
 @SuppressWarnings("serial")
 public class StartButton extends JButton implements ActionListener{
 
+
+	private static long startTime2;
+
 	public StartButton(){
 		super("START");
 		this.addActionListener(this);
 		
 	}
-	
-	
+
+
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		
+
 		//set the simulation on
 		Simulation.isRunning = true;
-		
+		startTime2 =Simulation.getGlobalTime();
 		//wake up the start station -> lets the simulation run
 		StartStation.getStartStation().wakeUp();
-	
+
+	}
+	/**
+	 * Get the starttime2
+	 *
+	 * @return the starttime2
+	 */
+	public static long getStartTime2() {
+		return startTime2;
 	}
 
-	
+
+
 }
