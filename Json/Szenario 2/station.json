@@ -1,0 +1,51 @@
+{
+  "settings": {
+    "station": [
+      {
+        "label": "Station_1",
+        "troughput": "5",
+        "x_position": "200",
+        "y_position": "100",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "220",
+          "y_position": "40"
+        },
+        "outqueue": {
+          "x_position": "220",
+          "y_position": "180"
+        }
+      },
+      {
+        "label": "Station_2",
+        "troughput": "5",
+        "x_position": "200",
+        "y_position": "400",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "220",
+          "y_position": "340"
+        },
+        "outqueue": {
+          "x_position": "220",
+          "y_position": "480"
+        }
+      },
+      {
+        "label": "Station_3",
+        "troughput": "1000",
+        "x_position": "500",
+        "y_position": "250",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "520",
+          "y_position": "190"
+        },
+        "outqueue": {
+          "x_position": "520",
+          "y_position": "330"
+        }
+      }
+    ]
+  }
+}

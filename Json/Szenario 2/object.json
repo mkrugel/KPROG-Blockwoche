@@ -1,0 +1,258 @@
+{
+  "settings": {
+    "object": [
+      {
+        "label": "Objekt_1",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_2",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_3",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_4",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_5",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_6",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_7",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_8",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_9",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_10",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_11",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_1",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_12",
+        "processtime": "10",
+        "speed": "2",
+        "capacity": "500",
+        "kosten": "5638.9",
+        "preis": "4.5",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_2",
+            "Station_3",
+            "End_Station"
+          ]
+        }
+      }
+    ]
+  }
+}

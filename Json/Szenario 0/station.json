@@ -1,0 +1,37 @@
+{  "settings": {
+    "station": [
+      {
+        "label": "Auffuell_Station1",
+        "troughput": "15",
+        "x_position": "220",
+        "y_position": "250",
+        "limit": "30000",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "240",
+          "y_position": "190"
+        },
+        "outqueue": {
+          "x_position": "240",
+          "y_position": "330"
+        }
+      },
+      {
+        "label": "Verschluss_Station1",
+        "troughput": "20",
+        "x_position": "500",
+        "y_position": "250",
+        "view": { "image": "station.png" },
+        "limit": "150000",
+        "inqueue": {
+          "x_position": "520",
+          "y_position": "190"
+        },
+        "outqueue": {
+          "x_position": "520",
+          "y_position": "330"
+        }
+      }
+    ]
+  }
+}

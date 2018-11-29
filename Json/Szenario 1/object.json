@@ -1,0 +1,246 @@
+{
+  "settings": {
+    "object": [
+      {
+        "label": "Objekt_1",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_2",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_3",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_4",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_5",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_6",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_7",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_8",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_9",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_10",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_11",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_12",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": { "image": "object.png" },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Station_3",
+            "End_Station"
+          ],
+          "einfuellStation": [
+            "Station_1",
+            "Station_2"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "start_station": {
+      "label": "Start_Station",
+      "x_position": "20",
+      "y_position": "400",
+      "view": { "image": "startstation.png" },
+      "inqueue": {
+        "x_position": "50",
+        "y_position": "360"
+      },
+      "outqueue": {
+        "x_position": "50",
+        "y_position": "480"
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "settings": {
+    "object": [
+      {
+        "label": "Objekt_1",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station1",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_2",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station2",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_3",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station3",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_4",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station4",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_5",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station1",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_6",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station2",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_7",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station3",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_8",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station4",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_9",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station1",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_10",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station2",
+            "Verschluss_Station1",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_11",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station3",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      },
+      {
+        "label": "Objekt_12",
+        "processtime": "10",
+        "speed": "2",
+        "kosten": "5638.9",
+        "preis": "2.5",
+        "capacity": "250",
+        "view": {
+          "image": "object.png",
+          "image2": "objectFull.png",
+          "image3": "objectDone.png"
+        },
+        "sequence": {
+          "station": [
+            "Start_Station",
+            "Auffuell_Station4",
+            "Verschluss_Station2",
+            "End_Station"
+          ]
+        }
+      }
+    ]
+  }
+}
