@@ -5,6 +5,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 import controller.model_plotter.CustomPoint;
 import controller.view_plotter.PlotterPane;
 
+import io.FactoryJson;
 import model.TheObject;
 import view.SimulationView;
 import io.Factory;
@@ -92,8 +93,28 @@ public class Simulation {
             actor.start();
 
         }
+    }
 
-        /*
+        private void JSONinit() {
+
+            //create all stations and objects for the starting scenario out of XML
+            FactoryJson.createStartScenario();
+
+            //the view of our simulation
+            new SimulationView();
+
+            // set up the the heartbeat (clock) of the simulation
+            new HeartBeat().start();
+
+            Statistics.show("---- Simulation gestartet ---\n");
+
+            // start all the actor threads
+            for (Actor actor : Actor.getAllActors()) {
+                actor.start();
+
+            }
+
+            /*
          * Hinweis: wenn nicht �ber den Startbutton gestartet werden soll oder die Simulation ohne View laufen soll,
          * den auskommentierten Code unten verwenden
          */
@@ -258,8 +279,8 @@ public class Simulation {
         }
         //a new simulation
         Simulation theSimulation = new Simulation();
-        theSimulation.init();
-        Factory.profitCounter();
+        theSimulation.JSONinit();
+        FactoryJson.profitCounter();
 
     }
 
