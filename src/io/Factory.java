@@ -274,8 +274,26 @@ public class Factory {
 
                 }
 
+                //  ######## hier bekommen wir die Einfüllstationen von der XML zu allFillStations
+
+                //the <einfüllStation> ... </einfüllStation> node
+                Element sequenceGroupFill = theObject.getChild("sequence");
+
+                List<Element> allFillStations = sequenceGroupFill.getChildren("einfuellStation");
+
+                //get the elements into a list
+                ArrayList<String> fillStationsToGo = new ArrayList<String>();
+
+                for (Element theStation : allFillStations) {
+
+                    fillStationsToGo.add(theStation.getText());
+
+                }
+
+                // Zusätzlichen Parameter an den Konstruktor von TheObject übergeben.
+
                 //creating a new TheObject object
-                TheObject.create(label, stationsToGo, processtime, speed, capacity, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+                TheObject.create(label, stationsToGo, fillStationsToGo, processtime, speed,capacity, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
 
 
             }

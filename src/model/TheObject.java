@@ -59,10 +59,16 @@ final public class TheObject extends Actor implements Observer {
      */
     private ArrayList<String> stationsToGo = new ArrayList<String>();
 
+    /* all the fill Station (labels) where the object have to go to
+	 */
+    private ArrayList<String> fillStationsToGo = new ArrayList<String>();
+
     /**
-     * a pointer to the actual position of the stationsToGo list, start position is 0
+     * a pointer to the actual position of the stationsToGo and fillStationsToGo list, start position is 0
      */
     private int stationListPointer = 0;
+    private int fillStationListPointer = 0;
+    private boolean haveToLookForFillStations = false;
 
     /**
      * list of all objects
@@ -92,6 +98,7 @@ final public class TheObject extends Actor implements Observer {
      *
      * @param label        of the object
      * @param stationsToGo the stations to go
+     * @param fillStationsToGo the fillstations to go
      * @param processtime  the processing time of the object, affects treatment by a station
      * @param speed        the moving speed of the object
      * @param capacity     the capacity of the object
@@ -99,7 +106,7 @@ final public class TheObject extends Actor implements Observer {
      * @param yPos         y position of the object
      * @param image        image of the object
      */
-    private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image) {
+    private TheObject(String label, ArrayList<String> stationsToGo,ArrayList<String> fillStationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image) {
         super(label, xPos, yPos);
 
         //create the view
@@ -108,6 +115,7 @@ final public class TheObject extends Actor implements Observer {
         TheObject.allObjects.add(this); //add object to the static list
 
         this.stationsToGo = stationsToGo;
+        this.fillStationsToGo=fillStationsToGo;
         this.processTime = processtime;
         this.mySpeed = speed;
         this.myCapacity = capacity;
@@ -125,6 +133,7 @@ final public class TheObject extends Actor implements Observer {
      *
      * @param label        of the object
      * @param stationsToGo the stations to go
+     * @param fillStationsToGo the fillstatiosn to go
      * @param processtime  the processing time of the object, affects treatment by a station
      * @param speed        the moving speed of the object
      * @param capacity     the capacity of the object
@@ -133,10 +142,10 @@ final public class TheObject extends Actor implements Observer {
      * @param image        image of the object
      * @return a new Object
      */
-    public static TheObject create(String label, ArrayList<String> stationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image) {
+    public static TheObject create(String label, ArrayList<String> stationsToGo,ArrayList<String> fillStationsToGo, int processtime, int speed, int capacity, int xPos, int yPos, String image) {
         if (freeObjects > 0) {
             freeObjects -= 1;
-            return new TheObject(label, stationsToGo, processtime, speed, capacity, xPos, yPos, image);
+            return new TheObject(label, stationsToGo, fillStationsToGo, processtime, speed, capacity, xPos, yPos, image);
         } else return null;
     }
 
@@ -154,19 +163,62 @@ final public class TheObject extends Actor implements Observer {
         //we are at the end of the list
         if (this.stationsToGo.size() < stationListPointer) return null;
 
-        //get the label of the next station from the list and increase the list pointer
-        String stationLabel = this.stationsToGo.get(stationListPointer++);
+        if(stationListPointer == 0 && !haveToLookForFillStations){
+            //get the label of the Start station from the list and increase the list pointer
+            String stationLabel = this.stationsToGo.get(stationListPointer++);
 
-        //looking for the matching station and return it
-        for (Station station : Station.getAllStations()) {
+            //looking for the matching station and return it
+            for (Station station : Station.getAllStations()) {
 
-            if (stationLabel.equals(station.getLabel())) return station;
+                if (stationLabel.equals(station.getLabel())){
+
+                    if(fillStationsToGo.size() == 0) {
+                        haveToLookForFillStations = false;
+                    }
+                    else {
+                        haveToLookForFillStations = true;
+                    }
+                    return station;
+                }
+
+            }
 
         }
+        else if(stationListPointer > 0 && !haveToLookForFillStations){
+            //get the label of the End station from the list and increase the list pointer
+            String stationLabel = this.stationsToGo.get(stationListPointer++);
 
+            //looking for the matching station and return it
+            for (Station station : Station.getAllStations()) {
+
+                if (stationLabel.equals(station.getLabel())) return station;
+            }
+        }
+        else if(fillStationListPointer <= 1 && haveToLookForFillStations){
+            haveToLookForFillStations = false;
+            //get the label of the Fill station from the list and increase the list pointer
+            String stationLabel = this.fillStationsToGo.get(fillStationListPointer++);
+
+            //looking for the matching station and return it
+            for (Station station : Station.getAllStations()) {
+
+                if(stationLabel.equals(station.getLabel())){
+                    if(((ProcessStation)station).getNumberOfInQObjects() <= 1){
+                        return station;
+                    }else{
+                        stationLabel = this.fillStationsToGo.get((fillStationListPointer++)%fillStationsToGo.size());
+                        for (Station nextStation : Station.getAllStations()) {
+
+                            if (stationLabel.equals(nextStation.getLabel())) {
+                                return nextStation;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return null; //the matching station isn't found
     }
-
     /**
      * Chooses a suited incoming queue of the given station and enter it
      *

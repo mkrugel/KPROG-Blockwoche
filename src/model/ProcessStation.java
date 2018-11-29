@@ -35,6 +35,8 @@ public class ProcessStation extends Station {
      */
     Measurement measurement = new Measurement();
 
+    public static int numberOfInQObjects = 0;
+
     /**
      * (private!) Constructor, creates a new process station
      *
@@ -86,7 +88,7 @@ public class ProcessStation extends Station {
 
             theNumber = theNumber + inQueue.size();
         }
-
+        numberOfInQObjects = theNumber;
         return theNumber;
 
     }
@@ -302,6 +304,11 @@ public class ProcessStation extends Station {
     @Override
     protected Collection<TheObject> getNextOutQueueObjects() {
         return null;
+    }
+
+    public int getNumberOfInQObjects(){
+        numberOfInQueueObjects();
+        return this.numberOfInQObjects;
     }
 
 }

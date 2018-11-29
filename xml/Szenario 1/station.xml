@@ -2,7 +2,7 @@
 <settings>
 	<station>
 		<label>Station_1</label>
-		<troughput>15</troughput>
+		<troughput>1</troughput>
 		<x_position>200</x_position>
 		<y_position>100</y_position>
 		<limit>30000</limit>
