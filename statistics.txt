@@ -1,0 +1,10 @@
+Objekt_1 0.0
+Objekt_2 0.0
+Objekt_3 0.0
+Objekt_4 0.0
+Objekt_5 0.0
+Objekt_6 0.0
+Objekt_7 0.0
+Objekt_8 0.0
+Objekt_9 0.0
+Objekt_10 0.0

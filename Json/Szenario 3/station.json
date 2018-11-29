@@ -1,0 +1,81 @@
+{
+  "settings": {
+    "station": [
+      {
+        "label": "Auffuell_Station1",
+        "troughput": "5",
+        "x_position": "220",
+        "y_position": "100",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "240",
+          "y_position": "40"
+        },
+        "outqueue": {
+          "x_position": "240",
+          "y_position": "180"
+        }
+      },
+      {
+        "label": "Auffuell_Station2",
+        "troughput": "5",
+        "x_position": "220",
+        "y_position": "300",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "240",
+          "y_position": "240"
+        },
+        "outqueue": {
+          "x_position": "240",
+          "y_position": "380"
+        }
+      },
+      {
+        "label": "Auffuell_Station3",
+        "troughput": "5",
+        "x_position": "220",
+        "y_position": "500",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "240",
+          "y_position": "440"
+        },
+        "outqueue": {
+          "x_position": "240",
+          "y_position": "580"
+        }
+      },
+      {
+        "label": "Auffuell_Station4",
+        "troughput": "5",
+        "x_position": "220",
+        "y_position": "700",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "240",
+          "y_position": "640"
+        },
+        "outqueue": {
+          "x_position": "240",
+          "y_position": "780"
+        }
+      },
+      {
+        "label": "Verschluss_Station1",
+        "troughput": "5",
+        "x_position": "450",
+        "y_position": "400",
+        "view": { "image": "station.png" },
+        "inqueue": {
+          "x_position": "470",
+          "y_position": "340"
+        },
+        "outqueue": {
+          "x_position": "470",
+          "y_position": "480"
+        }
+      }
+    ]
+  }
+}
