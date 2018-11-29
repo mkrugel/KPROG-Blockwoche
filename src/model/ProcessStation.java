@@ -8,8 +8,8 @@ import controller.Simulation;
 /**
  * Class for a processing station
  *
- * @author Jaeger, Schmidt
- * @version 2017-10-29
+ * @author Jaeger, Schmidt modified by Team 16
+ * @version 2018-11-29
  */
 public class ProcessStation extends Station {
 
