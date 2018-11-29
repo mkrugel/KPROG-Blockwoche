@@ -23,12 +23,12 @@ import org.jdom2.input.SAXBuilder;
  * @author Jaeger, Schmidt modified by Team16
  * @version 2018-11-27
  */
- public class Factory {
+public class Factory {
 
     /**
      * the gewinn of all objects
      */
-    static double gewinn =0.0;
+    static double gewinn = 0.0;
 
     /**
      * the objects XML data file
@@ -60,20 +60,20 @@ import org.jdom2.input.SAXBuilder;
      * the y position of the starting station, also position for all starting objects
      */
     private static int YPOS_STARTSTATION;
+
     /**
      * set the scenario which was choosed
      *
      * @param i the number to choose a scenario
      */
-
+/**
     public static void setScenario(int i) {
         if (i == 0) {
             theObjectDataFile = "xml/Szenario 0/object.xml";
             theStationDataFile = "xml/Szenario 0/station.xml";
             theStartStationDataFile = "xml/Szenario 0/startstation.xml";
             theEndStationDataFile = "xml/Szenario 0/endstation.xml";
-        }
-        else if (i == 1) {
+        } else if (i == 1) {
             theObjectDataFile = "xml/Szenario 1/object.xml";
             theStationDataFile = "xml/Szenario 1/station.xml";
             theStartStationDataFile = "xml/Szenario 1/startstation.xml";
@@ -95,7 +95,7 @@ import org.jdom2.input.SAXBuilder;
             theEndStationDataFile = "xml/Szenario 4/endstation.xml";
         }
     }
-
+*/
     /**
      * create the actors for the starting scenario
      */
@@ -119,7 +119,6 @@ import org.jdom2.input.SAXBuilder;
         try {
 
 
-
             //read the information from the XML file into a JDOM Document
             Document theXMLDoc = new SAXBuilder().build(theObjectDataFile);
 
@@ -135,8 +134,7 @@ import org.jdom2.input.SAXBuilder;
             double kosten1 = Double.parseDouble(kosten);
 
 
-
-            for(Object o : allObjects){
+            for (Object o : allObjects) {
                 Element object1 = (Element) o;
                 String preis = object1.getChildText("preis");
                 double preis1 = Double.parseDouble(preis);
@@ -146,7 +144,6 @@ import org.jdom2.input.SAXBuilder;
 
             gewinn = umsatz - kosten1;
             System.out.println("Profit: " + gewinn);
-
 
 
         } catch (JDOMException e) {
@@ -278,7 +275,7 @@ import org.jdom2.input.SAXBuilder;
                 }
 
                 //creating a new TheObject object
-                TheObject.create(label, stationsToGo, processtime, speed,capacity, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+                TheObject.create(label, stationsToGo, processtime, speed, capacity, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
 
 
             }
@@ -436,8 +433,24 @@ import org.jdom2.input.SAXBuilder;
             e.printStackTrace();
         }
     }
+
     public static double getGewinn() {
         return gewinn;
     }
 
+    public static void setTheObjectDataFile(String theObjectDataFile) {
+        Factory.theObjectDataFile = theObjectDataFile;
+    }
+
+    public static void setTheStationDataFile(String theStationDataFile) {
+        Factory.theStationDataFile = theStationDataFile;
+    }
+
+    public static void setTheStartStationDataFile(String theStartStationDataFile) {
+        Factory.theStartStationDataFile = theStartStationDataFile;
+    }
+
+    public static void setTheEndStationDataFile(String theEndStationDataFile) {
+        Factory.theEndStationDataFile = theEndStationDataFile;
+    }
 }
