@@ -269,10 +269,10 @@ public class Simulation {
 
             String jsonDateiEndung = ".json";
             //Statistics.show("xml/" + directories[i] + "/object");
-            Factory.setTheObjectDataFile("Json/" + directories[i] + "/object" + jsonDateiEndung);
-            Factory.setTheStartStationDataFile("Json/" + directories[i] + "/startstation" + jsonDateiEndung);
-            Factory.setTheStationDataFile("Json/" + directories[i] + "/station" + jsonDateiEndung);
-            Factory.setTheEndStationDataFile("Json/" + directories[i] + "/endstation" + jsonDateiEndung);
+            FactoryJson.setTheObjectDataFile("Json/" + directories[i] + "/object" + jsonDateiEndung);
+            FactoryJson.setTheStartStationDataFile("Json/" + directories[i] + "/startstation" + jsonDateiEndung);
+            FactoryJson.setTheStationDataFile("Json/" + directories[i] + "/station" + jsonDateiEndung);
+            FactoryJson.setTheEndStationDataFile("Json/" + directories[i] + "/endstation" + jsonDateiEndung);
         } catch (ArrayIndexOutOfBoundsException e) {
             // e.printStackTrace();
             System.exit(0);

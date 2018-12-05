@@ -15,7 +15,6 @@
 		<sequence>
 			<station>Start_Station</station>
 			<station>Station_1</station>
-
 			<station>Station_3</station>
 			<station>End_Station</station>
 		</sequence>
