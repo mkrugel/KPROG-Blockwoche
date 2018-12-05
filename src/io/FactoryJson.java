@@ -504,7 +504,21 @@ public class FactoryJson implements Convertable {
         }
         return jsonObject;
     }
+    public static void setTheObjectDataFile(String theObjectDataFile) {
+        FactoryJson.theObjectDataFile = theObjectDataFile;
+    }
 
+    public static void setTheStationDataFile(String theStationDataFile) {
+        FactoryJson.theStationDataFile = theStationDataFile;
+    }
+
+    public static void setTheStartStationDataFile(String theStartStationDataFile) {
+        FactoryJson.theStartStationDataFile = theStartStationDataFile;
+    }
+
+    public static void setTheEndStationDataFile(String theEndStationDataFile) {
+        FactoryJson.theEndStationDataFile = theEndStationDataFile;
+    }
 
 }
 
